@@ -55,7 +55,7 @@ def run():
         print(finalList)
 
         while guessWord:  
-            entryWord = [(input("Ingrese una letra: ")).lower()]
+            entryWord = [(input("Ingrese una letra: \n\n")).lower()]
             newWord = wordReplace(entryWord)
             counter = 0 
             for i in guess:
@@ -66,12 +66,12 @@ def run():
             word ="".join(finalList) 
             if guess == word:
                 guessWord = False
-                print("¡Adivinaste la palabra!")
+                print("¡Adivinaste la palabra!   "+ str(guess)+"\n\n")
         answer = (input("¿Quieres jugar de nuevo?" + "\nYes o No:"+ "\n")).lower()
         print(answer)
         if answer == "yes":
             run()
-            print("ingresó al if")
+            #print("ingresó al if")
         else :
             print("JUEGO TERMINADO")
             sys.exit()
