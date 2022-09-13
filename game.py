@@ -32,7 +32,7 @@ def random_word():
 
 def listWord():
     word = random_word()
-    print(word)
+    #print(word)
     list = []
     for i in word:
         list.append(i)
@@ -41,13 +41,14 @@ def listWord():
 
 def run():
     try:
+        print("Hangman Game \n\nComienza el juego\n\n¡Adivina la palabra!\n\n")
         guess = []
         guess = wordReplace(listWord())
         finalList = []
         guessWord = True
         life = True
         word = ""
-        print("arrancó" +str(guess))
+        #print("arrancó" +str(guess))
 
         for i in guess:
             finalList.append("_")
